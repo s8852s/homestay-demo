@@ -1,0 +1,19 @@
+module SessionsHelper
+  def current_user
+    if session[:userprof].present?
+      @user9487 ||= User.find_by(id: session[:userprof])
+
+    else
+      nil
+    end
+  end
+
+  def user_signed_in?
+    if current_user
+      return true
+    else
+      return false
+    end
+  end
+
+end

@@ -1,0 +1,25 @@
+<nav>
+  <ul>
+    <li><%= link_to "首頁", root_path %></li>
+    <li><%= link_to "客房介紹", "#" %></li>
+    <li><%= link_to "聯絡我們", "#" %></li>
+    <li><%= link_to "交通資訊", "#" %></li>
+    <li><%= link_to "線上訂房", "#" %></li>
+    <li><%= link_to "周邊景點", "#" %></li>
+  </ul>
+
+  <% if current_user %>
+  <ul>
+    <li>
+      <%= current_user.nickname %>
+      <%= link_to "編輯會員資料", edit_users_path %> 
+      <%= link_to "登出", sign_out_user_path, method: "delete" %> 
+    </li>
+  </ul>
+  <% else %>
+  <ul>
+    <li><%= link_to "註冊", sign_up_users_path %></li>
+    <li><%= link_to "登入", sign_in_user_path %></li>
+  </ul>
+  <% end %>
+</nav>

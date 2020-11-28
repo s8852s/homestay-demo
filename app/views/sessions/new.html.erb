@@ -1,0 +1,16 @@
+<h1>管理員登入</h1>
+
+<%= form_for(@user, url: sign_in_user_path) do |form| %>
+
+<div class="field">
+  <%= form.label :account, "帳號" %>
+  <%= form.text_field :account %>
+</div>
+
+<div class="field">
+  <%= form.label :password, "密碼" %>
+  <%= form.password_field :password %>
+</div>
+
+<%= form.submit "登入" %>
+<% end %>
