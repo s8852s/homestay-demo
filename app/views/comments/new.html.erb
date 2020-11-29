@@ -1,0 +1,14 @@
+<h1>留言回覆</h1>
+
+<%= form_for(@comment, url:post_comments_path(@post), method: "post") do |form| %>
+
+<div class="field">
+  <%= form.label :content, "回覆內容" %>
+  <%= form.text_area :content %>
+</div>
+
+
+<%= form.submit "發表回覆" %>
+<% end %>
+
+<%= link_to "返回上一頁", :back %>

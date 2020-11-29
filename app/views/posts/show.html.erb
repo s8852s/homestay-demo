@@ -22,3 +22,14 @@
     </tr>
   </tbody>
 </table>
+
+<h1>民宿回覆</h1>
+<%= link_to "回覆留言", new_post_comment_path(@post) %>
+
+<% @comment.each do |comment| %>
+<div class="field">
+  <%= comment.content %>
+</div>
+<% end %>
+
+

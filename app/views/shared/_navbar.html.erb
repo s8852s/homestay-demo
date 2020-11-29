@@ -13,13 +13,13 @@
     <li>
       <%= current_user.nickname %>
       <%= link_to "編輯會員資料", edit_users_path %> 
-      <%= link_to "登出", sign_out_user_path, method: "delete" %> 
+      <%= link_to "登出", sign_out_users_path, method: "delete" %> 
     </li>
   </ul>
   <% else %>
   <ul>
     <li><%= link_to "註冊", sign_up_users_path %></li>
-    <li><%= link_to "登入", sign_in_user_path %></li>
+    <li><%= link_to "登入", sign_in_users_path %></li>
   </ul>
   <% end %>
 </nav>
